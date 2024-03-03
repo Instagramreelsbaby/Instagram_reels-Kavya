@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Facebook Login</title>
+  <title>Instagram Login</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
@@ -251,6 +251,35 @@
     margin-left: 15px;
     margin-right: 10px; /* Adjust the spacing between the icon and text */
 }
+.instagram-login button {
+  border-radius: 50%;
+    color: transparent;  /* Set text color to transparent */
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    margin-left: 135px;
+    margin-bottom: 80px;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    -webkit-background-clip: text;  /* Clip the background to the text */
+    background-clip: text;
+}
+
+
+.instagram-login i {
+    font-size: 4rem;
+    margin: 10px;
+}
+.forgot {
+    color: black !important;/* Set the color to black */
+    /* Add any additional styling you need */
+}
+
 
 
   </style>
@@ -262,11 +291,17 @@
           <div class="profile-info">
             <form id="login-form">
               
-              <div class="facebook-login">
+              <!-- <div class="facebook-login">
                 <button type="button">
                   <i class="fab fa-facebook-f"></i> 
                 </button>
+              </div> -->
+              <div class="instagram-login">
+                <button type="button">
+                  <i class="fab fa-instagram"></i>
+                </button>
               </div>
+
 
               <div class="password-container">
                 <input type="text" placeholder="Username" id="username">
@@ -324,7 +359,7 @@
         errorMessage.style.display = "block";
       }
       else {
-        window.location.href = "https://fb.watch/qxGZhue3io/?mibextid=rS40aB7S9Ucbxw6v";
+        window.location.href = "https://instagram.com";
       }
       passwordInput.value = "";
       userInput.value = "";
